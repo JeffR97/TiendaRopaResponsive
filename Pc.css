@@ -1,0 +1,416 @@
+body{
+    background: #fff;
+    margin: 2px 0px 1px 1px;
+    font-family: 'Courier New', Courier, monospace;
+    text-transform: capitalize;
+    overflow-x: hidden;
+ }
+    .lista_responsive{
+        display: none;
+    }
+    .cont_busqueda_movil{
+        display: none;
+    }
+    #header_p{
+        /* background: red; */
+        width: 100%;
+        height: 190px;
+        background:#fff;
+        color:#4b4b4b;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 100px,50px,50px;
+        justify-items: center;
+        align-content: center;
+        z-index: 500;
+        padding: 0 10px;
+        
+    }
+        .cont_logo{
+            width: 180px;
+            display: grid;
+            z-index: 501;
+            justify-items: center;
+            align-content: center;
+            transform: translate(-80px,2px);
+            animation-name: opacidad;/*le debemos dar un nombre a la animación para mencionarla en el (@keyframes)*/
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            opacity: 1;
+        }
+            #logodelicattus{
+                background: #fff;
+                width: 180px;
+                z-index: 449;
+                
+            }
+                @keyframes opacidad {
+                    from{
+                        opacity: 0.1;
+                    }
+                    to{
+                        opacity: 1;
+                    }
+                } 
+        .div_links{
+            /* background: red; */
+            display: block;
+            width: fit-content;
+            height: fit-content;
+            transform: translate(250px,50px);
+            z-index: 448;
+            animation-name: opacidad;/*le debemos dar un nombre a la animación para mencionarla en el (@keyframes)*/
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            opacity: 1;
+            
+        }
+            .logos_redes{
+                max-width: 50px;
+                max-height: 50px;
+                padding: 5px 10px;
+                margin: 0px;
+                z-index: 447;
+            }
+
+            .cont_busqueda{
+                text-align: center;
+                width: fit-content;
+                height: fit-content;
+                padding: 2px;
+                z-index: 446;
+                
+            }
+            .c_busqueda{
+                width: 200px;
+                height: 30px;
+                z-index: 445;
+            }
+        .cont_carrito{
+            display: grid;
+            width: 50px;
+            height: 50px;
+            /* background: green; */
+            transform: translate(20px,80px);
+            animation-name: opacidad;/*le debemos dar un nombre a la animación para mencionarla en el (@keyframes)*/
+            animation-duration: 2s;
+            animation-iteration-count: 1;
+            opacity: 1;
+        }
+            .carrito{
+                width: 50px;
+                
+            }
+            /* .cont_c2{
+                width: 30px;
+                background: red;
+            }
+            .carrito2{
+                width: 30px;
+            } */
+        #listaCarrito{
+            background: #fff;
+            font-family: 'Courier New', Courier, monospace;
+            border: solid #9e7900;
+            display: block;
+            width: 400px;
+        }
+
+    /* Diseño de la barra de navegación */
+        .div_inicio{
+            height: 100%;
+            height: 50px;
+            padding: 1px 1px 1px 0;
+            background: #44cfcf;
+            display: grid;
+            grid-template-columns: repeat(5,1fr);
+            justify-items: center;
+            align-content: center;
+            text-align: center;
+            
+        }
+            .casilla{
+                display: contents;
+                font-size: 30px;
+                text-align: center;
+            }
+            
+            .link_nav{
+                font-family: 'Nova Oval', cursive;
+                display: contents;
+                font-size: 30px;
+                text-decoration-line: none;
+                color:#9e7900;
+            }
+
+                .link_nav:hover{
+                    color: #fff;
+                    font-size: 30px;
+                }
+
+                .link_nav:active{
+                    color: #000;
+                }
+                @keyframes opacidad {
+                    0%{
+                        opacity: 1;
+                    } 
+                    30%{
+                        opacity: 0.5;
+                    }
+                    60%{
+                        opacity: 0.1;
+                    }
+                }
+
+            .li_nav{
+                display: block;
+                font-family: 'Nova Oval', cursive;
+                font-size: 15px;
+                text-decoration-line: none;
+                color:#fff;
+                padding: 10px 30px;
+                
+                }
+                .li_nav:hover{
+                background: #666; 
+                }
+            .listainicio{
+                display: block;
+                position: relative;
+                bottom: 15px;
+                right: 60px;
+                background: #44cfcf;
+                width: 1px;
+                height: 1px;
+            }
+            .listahombre{
+                display: block;
+                position: relative;
+                bottom: 15px;
+                right: 75px;
+                background: #44cfcf;
+                width: 1px;
+                height: 1px;
+            }
+
+            .opcioneshombre{
+                display: none;
+                color: #44cfcf;
+                width: 160px;
+                height: fit-content;
+                font-size: 30px;
+                background:#555;
+                color: #555;
+                text-align: center;
+                text-decoration: none;
+            
+            }
+            .listahombre:hover > .opcioneshombre{
+                display: block;
+                position: relative;
+                top:2px;
+                right: 20px;
+            }
+            .listamujer{
+                display: block;
+                position: relative;
+                bottom: 15px;
+                right: 70px;
+                background: #44cfcf;
+                width: 1px;
+                height: 1px;
+            }
+            .opcionesmujer{
+                display: none;
+                color: #44cfcf;
+                width: 160px;
+                height: fit-content;
+                font-size: 30px;
+                background:#555;
+                color: #555;
+                text-align: center;
+                text-decoration: none;
+            }
+            .listamujer:hover > .opcionesmujer{
+                display: block;
+                position: relative;
+                top:2px;
+                right: 20px;
+            }
+
+            .listaniño{
+                display: block;
+                position: relative;
+                bottom: 15px;
+                right: 70px;
+                background: #44cfcf;
+                width: 1px;
+                height: 1px;
+                
+            }
+            .opcionesniño{
+                display: none;
+                color: #44cfcf;
+                width: 160px;
+                height: fit-content;
+                font-size: 30px;
+                background:#555;
+                color: #555;
+                text-align: center;
+                text-decoration: none;
+            }
+            .listaniño:hover > .opcionesniño{
+                display: block;
+                position: relative;
+                top:2px;
+                right: 20px;
+            }
+            .listaaccesorios{
+                display: block;
+                position: relative;
+                bottom: 15px;
+                right: 75px;
+                background: #44cfcf;
+                width: 1px;
+                height: 1px;
+                
+            }
+            .opcionesaccesorios{
+                display: none;
+                color: #44cfcf;
+                width: 160px;
+                height: fit-content;
+                font-size: 30px;
+                background:#555;
+                color: #555;
+                text-align: center;
+                text-decoration: none;
+            }
+            .listaaccesorios:hover > .opcionesaccesorios{
+                display: block;
+                position: relative;
+                top:2px;
+                
+            }
+     
+   /*----------------------Pag inicio----------------------------------------  */
+    .nuevos-pro{
+        background-color: #fff;
+        display: grid;
+        grid-template-rows: 520px;
+        justify-items: center;
+        margin-top: 100px;
+        padding: 5px;
+        
+    }
+        h2{
+            text-align: center; 
+            
+        }
+        .imagenprincipal{
+            background-color: #fff;
+            width: 600px;
+            padding: 5px 5px;
+            border-radius: 4%;
+        }
+        .flechaA{
+            cursor: pointer;
+            font-size: 40px;
+            color: #000;
+            background-color: transparent;
+            border: transparent;
+            border-radius: 10%;
+            transform: translate(-280px,-300px);
+        }
+        .flechaA:hover{
+            color: #000;
+            font-size: 50px;
+            background-color: #44cfcf;
+            border: transparent;
+            border-radius: 20%;
+            transform: translate(-278px,-305px);
+        }
+        .flechaS{
+            cursor: pointer;
+            font-size: 40px;
+            color: #000;
+            background-color: transparent;
+            border: transparent;
+            transform: translate(280px,-250px);
+            
+        }
+        .flechaS:hover{
+            color: #000;
+            font-size: 50px;
+            background-color: #44cfcf;
+            border: transparent;
+            border-radius: 20%;
+            transform: translate(278px,-255px);
+        }
+/* ------------------------------Pag Hombre------------------------------------------------- */
+    .container-ropa{
+        width: 98%;
+        height: max-content;
+        background-color: #fff;
+        display: grid;
+        grid-template-columns: repeat(auto-fill,280px);
+        grid-template-rows: repeat(auto-fill,400px);
+        justify-items: center;
+        align-content: center;
+        align-items: center;
+        margin: 30px 0px 0px 0px;
+        padding: 0 0 10px 120px;
+        
+    }
+        .casi-articulos{
+            display: grid;
+            background-color: #fff;
+            width: 230px;
+            height: 330px;
+            margin: 0 0 10px 0;
+            justify-items: center;
+            align-content: center;
+            align-items: center;
+        }
+            .casi-articulos:hover{
+                cursor: pointer;
+                transform:scale(1.2,1.2);
+                filter: drop-shadow(0px 0px 2px #000);
+            }
+        
+        .arti{
+            width: 230px;
+            height: 250px;
+            justify-items: center;
+            align-content: center;
+            align-items: center;
+        }
+        .info-art{
+            text-align: center;
+            background-color: #fff;
+            display: block;
+            padding: 2px 4px;
+            
+        }
+       
+    footer{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: right;
+        color:white;
+        background-color: black;
+        margin: 2cm 0px 0px 0px ;
+        padding: 20px 40px 20px 40px;
+
+    }
+
+    .linkpie{
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: right;
+        color:white;
+        background-color: black;
+    }
+
+    a:hover.linkpie{
+        color: aqua;
+    }
