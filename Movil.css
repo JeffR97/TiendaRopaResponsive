@@ -1,28 +1,19 @@
 
 /* <!-- Pag web para dispositivos moviles -->*/
-.nav_movil{
-    background:#44cfcf;
-    width:100%;
-    height: 50px;
-    margin: 0 0 10px 0 ;
-    position: sticky;
-    top: 0px;
-    z-index: 444;
-}
-@media only screen and (max-width:980px){
+
+@media only screen and (max-width:900px){
     /* eliminamos la barra de navegación y links de redes sociales*/
     .div_inicio{
         display: none;
     }
-    .div_links{
+    .cont_links{
         display: none;
         
     }
 
-    
     #header_p{
         width: 100%;
-        height: 140px;
+        height: 90px;
         background:#fff;
         color:#4b4b4b;
         display: grid;
@@ -36,32 +27,32 @@
         .cont_logo{
             display: grid;
             z-index: 501;
-            background: red;
+            /* background: red; */
             transform: translate(0,0);
-            width: 140px;
+            width: 90px;
             animation-name: opacidad;/*le debemos dar un nombre a la animación para mencionarla en el (@keyframes)*/
             animation-duration: 2s;
             animation-iteration-count: 1;
             opacity: 1;
         }
         #logodelicattus{
-            width: 140px;
-            height: 140px;
+            width: 86px;
+            height: 86px;
             z-index: 449;
-            
         }
         .cont_busqueda_movil{
             display: grid;
-            background: #44cfcf;
+            background: #81d3c3;
             color: #4b4b4b;
-            font-size: 30px;
-            border-radius: 10px;
+            font-size: 20px;
+            background: #81d3c3;
+            border-radius: 50%;
             width: 40px;
             height: 40px;
             z-index: 446;
             justify-items: center;
             align-content: center;
-            transform: translate(80px,80px);
+            transform: translate(80px,50px);
             margin: 1px;
             animation-name: opacidad;/*le debemos dar un nombre a la animación para mencionarla en el (@keyframes)*/
             animation-duration: 2s;
@@ -81,29 +72,27 @@
                 height: 40px;
                 z-index: 445;
             }
-            .cont_carrito{
-                display: grid;
-                background: #44cfcf;
-                border-radius: 10px;
-                padding: 4px 0 0 4px;
-                width: 40px;
-                height: 40px;
-                transform: translate(-10px,80px);
-                animation-name: opacidad;/*le debemos dar un nombre a la animación para mencionarla en el (@keyframes)*/
-                animation-duration: 2s;
-                animation-iteration-count: 1;
-                opacity: 1;
+        .cont_carrito{
+            /* display: grid; */
+            display: block;
+            background: #81d3c3;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            transform: translate(0px,50px);
             }
                 .cont_carrito:hover{
                     background: #fff;
                     color: #000;
                     transition: 0.8s;
                     cursor: pointer;
+                    box-shadow: none;
                     
                 }
-                .carrito{
-                    width: 35px;
-                    
+                .img_carrito{
+                    width: 25px;
+                    /* height: 30px; */
+                    padding: 7px 0px 0px 7px;
                 }
                 @keyframes opacidad {
                     from{
@@ -114,9 +103,20 @@
                     }
                 } 
     /* Diseño del boton responsive de navegación*/
+    .nav_movil{
+        background:#81d3c3;
+        width:100%;
+        height: 50px;
+        margin: 0 0 10px 0 ;
+        position: sticky;
+        top: 0px;
+        z-index: 444;
+    }
     .lista_responsive{
         display: contents;
         position: relative;
+        background: green;
+        
         
     }
         .cont_boton{
@@ -132,7 +132,6 @@
                 position: relative;
                 top: 4px;
                 left: 30px;
-                background: #44cfcf;;
                 color: #9e7900;
                 width: 20px;
                 height: 30px;
@@ -158,6 +157,7 @@
         height: calc(100vh - 10px);
         text-align: center;
         padding: 2px;
+        opacity: 95%;
         }
             .lista_responsive:hover > .cont_items_responsive{
                 display: block;
@@ -175,13 +175,17 @@
                 text-decoration-line: none;
                 color:#fff;
                 display: block;
+                opacity: 60%;
             }
             .link_inicio_responsive:hover{
-                background: #666;
+                /* background: #666; */
+                border-left: 3px solid #81d3c3;
+                opacity: 1;
             }
 
             .link_inicio_responsive:active{
                 color: #000;
+                
             }
 
     

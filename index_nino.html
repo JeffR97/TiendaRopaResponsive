@@ -19,10 +19,13 @@
         <div class="cont_logo">
             <img  id="logodelicattus" src="imagenes/logodelicattus.png"/>
         </div>
-        <div class="div_links">
-            <a  href="https://es-la.facebook.com"><img class= "logos_redes" src="imagenes/facebook.png" alt="facebook"></a>
-            <a  href="https://www.instagram.com/"><img class= "logos_redes" src="imagenes/Instagram.png" alt="instagram"></a>
-            <a  href="https://web.whatsapp.com/"><img  class= "logos_redes" src="imagenes/whatsapp.png" alt="WhatsApp"></a>
+        <div class="cont_links">
+            <div class="redes">
+                <a  href="https://es-la.facebook.com"><img class= "logos_redes" src="imagenes/facebook.png" alt="facebook"></a>
+                <a  href="https://www.instagram.com/"><img class= "logos_redes" src="imagenes/Instagram.png" alt="instagram"></a>
+                <a  href="https://web.whatsapp.com/"><img  class= "logos_redes" src="imagenes/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+            
             <div class="cont_busqueda">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input class="c_busqueda" type="search" placeholder="buscar"/> 
@@ -33,7 +36,18 @@
             <input class="busqueda_movil" type="search" placeholder="buscar"/> 
         </div>
         <div class="cont_carrito">
-            <img  class="carrito" src="imagenes/shoppingcart.png" alt="Carrito"/>
+            <img  class="img_carrito" src="imagenes/shoppingcart.png" alt="Carrito"/>
+            <!-- Lista -->
+            <div class="cont_listaC" >
+                <h2>Tu Carrito</h2>
+                <hr>
+                <ul id="lista-carrito">
+                    <!-- Los elementos del carrito se cargarán aquí -->
+                </ul>
+                <hr>
+                <strong id="totalC">Total: $<span id="total-carrito">0</span></strong>
+                <button id="vaciar-carrito">Vaciar Carrito</button>
+            </div>
         </div>
     </header>
 
@@ -109,23 +123,17 @@
         </ul>  
     </nav>
 
-    <div class="container-ropa">
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/" />
-            <b class="info-art">
-            buso.
-            <br>
-            120.000
-            </b>
-        </div>
+    <div class="container-ropa-N">
+        
     </div>
 
-    <div>
-        <footer>
-        contactos.<br>
-        WhatsApp: 000-000-00-00<br>
-        <a class="linkpie" href="https://mail.google.com/mail/u/0/#inbox?compose=new">correo electronico: Delicattus@gmail.com</a><br>
-        </footer>
-  </div>
+    <footer>
+    contactos.<br>
+    WhatsApp: 000-000-00-00<br>
+    <a class="linkpie" href="https://mail.google.com/mail/u/0/#inbox?compose=new">correo electronico: Delicattus@gmail.com</a><br>
+    </footer>
+
+    <!-- documento de JavaScript -->
+    <script src="backendTienda.JS"></script>
 </body>
 </html>

@@ -20,10 +20,13 @@
         <div class="cont_logo">
             <img  id="logodelicattus" src="imagenes/logodelicattus.png"/>
         </div>
-        <div class="div_links">
-            <a  href="https://es-la.facebook.com"><img class= "logos_redes" src="imagenes/facebook.png" alt="facebook"></a>
-            <a  href="https://www.instagram.com/"><img class= "logos_redes" src="imagenes/Instagram.png" alt="instagram"></a>
-            <a  href="https://web.whatsapp.com/"><img  class= "logos_redes" src="imagenes/whatsapp.png" alt="WhatsApp"></a>
+        <div class="cont_links">
+            <div class="redes">
+                <a  href="https://es-la.facebook.com"><img class= "logos_redes" src="imagenes/facebook.png" alt="facebook"></a>
+                <a  href="https://www.instagram.com/"><img class= "logos_redes" src="imagenes/Instagram.png" alt="instagram"></a>
+                <a  href="https://web.whatsapp.com/"><img  class= "logos_redes" src="imagenes/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+            
             <div class="cont_busqueda">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input class="c_busqueda" type="search" placeholder="buscar"/> 
@@ -34,7 +37,18 @@
             <input class="busqueda_movil" type="search" placeholder="buscar"/> 
         </div>
         <div class="cont_carrito">
-            <img  class="carrito" src="imagenes/shoppingcart.png" alt="Carrito"/>
+            <img  class="img_carrito" src="imagenes/shoppingcart.png" alt="Carrito"/>
+            <!-- Lista -->
+            <div class="cont_listaC" >
+                <h2>Tu Carrito</h2>
+                <hr>
+                <ul id="lista-carrito">
+                    <!-- Los elementos del carrito se cargarán aquí -->
+                </ul>
+                <hr>
+                <strong id="totalC">Total: $<span id="total-carrito">0</span></strong>
+                <button id="vaciar-carrito">Vaciar Carrito</button>
+            </div>
         </div>
     </header>
 
@@ -110,11 +124,58 @@
         </ul>  
     </nav>
    
-    <div class="nuevos-pro">
-        <article><img class="imagenprincipal" src="imagenes/ropamujer/tenis.png" /></article>
-        <button class="flechaS">></button>
-        <button class="flechaA"><</button>
+    <div class="contenedor-acordeon">
+        <div class="container-muestras">
+            <div class="card">
+                <img class="background" src="imagenes/ropahombre/jordan-spizike.png" />
+                <div class="card-content">
+                    
+                    <h3 class="title">Jordan spizike</h3>
+                </div>
+                <div class="backdrop"></div>
+            </div>
+            <div class="card">
+                <img class="background" src="imagenes/ropahombre/camiseta-nba.png" />
+                <div class="card-content">
+                    
+                    <h3 class="title">nba</h3>
+                </div>
+                <div class="backdrop"></div>
+            </div>
+            <div class="card">
+                <img class="background" src="imagenes/ropamujer/vest-1.jpg" />
+                <div class="card-content">
+                    
+                    <h3 class="title">Vestido ZARA</h3>
+                </div>
+                <div class="backdrop"></div>
+            </div>
+            <div class="card">
+                <img class="background" src="imagenes/ropamujer/vest-2.jpg" />
+                <div class="card-content">
+                    
+                    <h3 class="title">Vestido ZARA</h3>
+                </div>
+                <div class="backdrop"></div>
+            </div>
+            <div class="card">
+                <img class="background" src="imagenes/ropaniño/cha-nina1.jpg" />
+                <div class="card-content">
+                    
+                    <h3 class="title">ZARA</h3>
+                </div>
+                <div class="backdrop"></div>
+            </div>
+            <div class="card">
+                <img class="background" src="imagenes/ropaniño/zap-nina1.jpg" />
+                <div class="card-content">
+                    <h3 class="title">ZARA</h3>
+                </div>
+                <div class="backdrop"></div>
+            </div>
+        </div>
     </div>
+    
     
     
     <div>
@@ -124,6 +185,7 @@
         <a class="linkpie" href="https://mail.google.com/mail/u/0/#inbox?compose=new">correo electronico: Delicattus@gmail.com</a><br>
         </footer>
   </div>
-
+    <!-- documento de JavaScript -->
+    <script src="backendTienda.JS"></script>
 </body>
 </html>

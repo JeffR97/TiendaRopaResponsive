@@ -19,10 +19,13 @@
         <div class="cont_logo">
             <img  id="logodelicattus" src="imagenes/logodelicattus.png"/>
         </div>
-        <div class="div_links">
-            <a  href="https://es-la.facebook.com"><img class= "logos_redes" src="imagenes/facebook.png" alt="facebook"></a>
-            <a  href="https://www.instagram.com/"><img class= "logos_redes" src="imagenes/Instagram.png" alt="instagram"></a>
-            <a  href="https://web.whatsapp.com/"><img  class= "logos_redes" src="imagenes/whatsapp.png" alt="WhatsApp"></a>
+        <div class="cont_links">
+            <div class="redes">
+                <a  href="https://es-la.facebook.com"><img class= "logos_redes" src="imagenes/facebook.png" alt="facebook"></a>
+                <a  href="https://www.instagram.com/"><img class= "logos_redes" src="imagenes/Instagram.png" alt="instagram"></a>
+                <a  href="https://web.whatsapp.com/"><img  class= "logos_redes" src="imagenes/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+            
             <div class="cont_busqueda">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input class="c_busqueda" type="search" placeholder="buscar"/> 
@@ -33,7 +36,18 @@
             <input class="busqueda_movil" type="search" placeholder="buscar"/> 
         </div>
         <div class="cont_carrito">
-            <img  class="carrito" src="imagenes/shoppingcart.png" alt="Carrito"/>
+            <img  class="img_carrito" src="imagenes/shoppingcart.png" alt="Carrito"/>
+            <!-- Lista -->
+            <div class="cont_listaC" >
+                <h2>Tu Carrito</h2>
+                <hr>
+                <ul id="lista-carrito">
+                    <!-- Los elementos del carrito se cargarán aquí -->
+                </ul>
+                <hr>
+                <strong id="totalC">Total: $<span id="total-carrito">0</span></strong>
+                <button id="vaciar-carrito">Vaciar Carrito</button>
+            </div>
         </div>
     </header>
 
@@ -109,111 +123,18 @@
         </ul>  
     </nav>
 
-    <div class="container-ropa">
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropamujer/chaquetaJean.jpeg"/>
-            <b class="info-art">
-            Chaqueta en jean.
-            <br>
-            210.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropamujer/conjuntoazul.jpeg"/>
-            <b class="info-art">
-            Conjunto en ceda.
-            <br>
-            120.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropamujer/deportivomujer.png"/>
-            <b class="info-art">
-            Deportivo
-            <br>
-            Color: beige.
-            <br>
-            115.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropamujer/bolsoAdidasRosa.jpeg"/>
-            <b class="info-art">
-            Bolso adidas rosado.
-            <br>
-            130.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropamujer/bolsoNikeRojo.jpeg"/>
-            <b class="info-art">
-            Bolso nike rojo.
-            <br>
-            142.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropamujer/busorosa.png"/>
-            <b class="info-art">
-            Buso de cuello
-            <br>
-            Color: rosado.
-            <br>
-            70.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropamujer/chaquetaCuerina.jpeg"/>
-            <b class="info-art">
-            Chaqueta de cuerina.
-            <br>
-            80.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropamujer/pantalonCamuflado.jpeg"/>
-            <b class="info-art">
-            Sudadera camuflada.
-            <br>
-            80.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropamujer/tenis.png"/>
-            <b class="info-art">
-            Zapatos nike.
-            <br>
-            Color: blanco-gris
-            <br>
-            160.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropamujer/TenisAdidasNegro.jpeg"/>
-            <b class="info-art">
-            Zapatos adidas
-            <br>
-            Color: negro
-            <br>
-            150.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropamujer/busomujer.png" />
-            <b class="info-art">
-            Buso unico color.
-            <br>
-            120.000
-            </b>
-        </div>
+    <div class="container-ropa-M">
         
     </div>
-    <div>
-        <footer>
-        contactos.<br>
-        WhatsApp: 000-000-00-00<br>
-        <a class="linkpie" href="https://mail.google.com/mail/u/0/#inbox?compose=new">correo electronico: Delicattus@gmail.com</a><br>
-        </footer>
-  </div>
+
+    <footer>
+    contactos.<br>
+    WhatsApp: 000-000-00-00<br>
+    <a class="linkpie" href="https://mail.google.com/mail/u/0/#inbox?compose=new">correo electronico: Delicattus@gmail.com</a><br>
+    </footer>
+
+    <!-- estilos de JavaScript -->
+    <script src="backendTienda.JS"></script>
+
 </body>
 </html>

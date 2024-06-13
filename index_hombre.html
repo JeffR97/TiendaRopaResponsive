@@ -4,25 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ropa Hombre</title>
+    <!-- estilos CSS -->
     <link rel="stylesheet" href="Pc.css" />
     <link rel="stylesheet" href="Movil.css" />
 
+    <!-- Letras font family -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nova+Oval&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/99fb995ce2.js" crossorigin="anonymous"></script>
+
+    
 </head>
 <body>
     <header id="header_p">
         <div class="cont_logo">
             <img  id="logodelicattus" src="imagenes/logodelicattus.png"/>
         </div>
-        <div class="div_links">
-            <a  href="https://es-la.facebook.com"><img class= "logos_redes" src="imagenes/facebook.png" alt="facebook"></a>
-            <a  href="https://www.instagram.com/"><img class= "logos_redes" src="imagenes/Instagram.png" alt="instagram"></a>
-            <a  href="https://web.whatsapp.com/"><img  class= "logos_redes" src="imagenes/whatsapp.png" alt="WhatsApp"></a>
+        <div class="cont_links">
+            <div class="redes">
+                <a  href="https://es-la.facebook.com"><img class= "logos_redes" src="imagenes/facebook.png" alt="facebook"></a>
+                <a  href="https://www.instagram.com/"><img class= "logos_redes" src="imagenes/Instagram.png" alt="instagram"></a>
+                <a  href="https://web.whatsapp.com/"><img  class= "logos_redes" src="imagenes/whatsapp.png" alt="WhatsApp"></a>
+            </div>
+            
             <div class="cont_busqueda">
                 <i class="fa-solid fa-magnifying-glass"></i>
                 <input class="c_busqueda" type="search" placeholder="buscar"/> 
@@ -33,7 +40,18 @@
             <input class="busqueda_movil" type="search" placeholder="buscar"/> 
         </div>
         <div class="cont_carrito">
-            <img  class="carrito" src="imagenes/shoppingcart.png" alt="Carrito"/>
+            <img  class="img_carrito" src="imagenes/shoppingcart.png" alt="Carrito"/>
+            <!-- Lista -->
+            <div class="cont_listaC" >
+                <h2>Tu Carrito</h2>
+                <hr>
+                <ul id="lista-carrito">
+                    <!-- Los elementos del carrito se cargarán aquí -->
+                </ul>
+                <hr>
+                <strong id="totalC">Total: $<span id="total-carrito">0</span></strong>
+                <button id="vaciar-carrito">Vaciar Carrito</button>
+            </div>
         </div>
     </header>
 
@@ -108,226 +126,19 @@
             </div>     
         </ul>  
     </nav>
-    <!-- <div id="listaCarrito">
-        <b>Carrito de Compras</b>
-        <ul id="listaArticulosSeleccionados"></ul>
-    </div>
-        <script>
-            function handleClick(event) {
-            // Obtener el elemento que se hizo clic
-            
-            // Obtener la lista de clases del elemento
-            var clases = elemento.classList;
-            
-            // Convertir la lista de clases a un array para facilitar su manipulación
-            var clasesArray = Array.from(clases);
-            
-            // Ahora puedes trabajar con las clases, por ejemplo, imprimir todas las clases del elemento
-            console.log("Clases del elemento:", clasesArray.join(", "));
-            elemento.addEventListener("click", agregarAlCarrito);
-        }
-        </script> -->
-        
-        <!-- <script>
-            // Función para manejar el clic en cualquier elemento con la clase "arti"
-            function agregarAlCarrito(evento) {
-                // Obtener el elemento que se hizo clic
-                var elemento = evento.target;
-                // Verificar si el elemento tiene la clase "arti"
-                if (elemento.classList.contains("info-art")) {
-                    var listaArticulosSeleccionados = document.getElementById("listaArticulosSeleccionados");
-                    var nuevoItem = document.createElement("li");
-                    nuevoItem.textContent = elemento.nextElementSibling.textContent;
-                    listaArticulosSeleccionados.appendChild(nuevoItem);
-                }
-            }
-
-            // Obtener todos los elementos con la clase "arti"
-            var articulos = document.querySelectorAll(".info-art");
-
-            // Agregar un evento de clic a cada elemento "arti" para llamar a la función agregarAlCarrito
-            articulos.forEach(function(articulo) {
-                articulo.addEventListener("click", agregarAlCarrito);
-            });
-        </script> -->
-        <!-- <script>
-            // Función para manejar el clic en la imagen del carrito
-            function agregarAlCarrito(event) {
-                // Obtener todos los elementos con la clase "arti"
-                var elemento = event.target;
-                var articulo = document.querySelector(".");
-                // var articulos = document.getElementsByClassName("arti");
-                var listaArticulosSeleccionados = document.getElementById("listaArticulosSeleccionados");
-
-                // Iterar sobre los elementos y agregarlos a la lista de artículos seleccionados
-                for (var i = 0; i < articulos.length; i++) {
-                    var articulo = articulos[i];
-                    var nuevoItem = document.createElement("li");
-                    nuevoItem.textContent =  articulo.nextElementSibling.textContent;
-                    listaArticulosSeleccionados.appendChild(nuevoItem);
-                }
-            }
-
-            // Obtener la imagen del carrito
-            var elemento = document.querySelector(".carrito");
-
-            // Agregar un evento de clic a la imagen del carrito para llamar a la función agregarAlCarrito
-            elemento.addEventListener("click", agregarAlCarrito);
-        </script> -->
-    <div class="container-ropa">
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/bu2.png" />
-            <b class="info-art">
-            buso de hombre.
-            <br>
-            150.000
-            </b>
-            <!-- <div class="cont_c2">
-                <img  class="carrito2" src="imagenes/shoppingcart.png" alt="Carrito"/>
-            </div> -->
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes//ropahombre/bu1.png"/>
-            <b class="info-art">
-                buso rojo hombre.
-            <br>
-                150.000
-            </b>
-            <!-- <div class="cont_c2">
-                <img  class="carrito2" src="imagenes/shoppingcart.png" alt="Carrito"/>
-            </div> -->
-            
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/b1.jpeg" />
-            <b class="info-art">
-                boxer en 3 colores disponibles.
-                <br>
-                50.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/c1.jpeg" />
-            <b class="info-art">
-                camiseta 4 colores disponibles.
-            <br>
-                80.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/c2.jpeg" />
-            <b class="info-art">
-                buso rojo hombre.
-            <br>
-                85.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/c3.jpeg" />
-            <b class="info-art">
-                camiseta New york.
-            <br>
-                80.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/c4.jpeg" />
-            <b class="info-art">
-                camiseta, solo en negro.
-            <br>
-                150.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/cha1.jpeg" />
-            <b class="info-art">
-                cortavientos semicamuflada.
-            <br>
-                100.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/cha2.jpeg" />
-            <b class="info-art">
-                chaqueta, solo en negro.
-            <br>
-                120.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/cha3.jpeg" />
-            <b class="info-art">
-                chaqueta camuflado azul.
-            <br>
-                130.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/cha4.png" />
-            <b class="info-art">
-                chaqueta yahama.
-            <br>
-                150.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/g1.png" />
-            <b class="info-art">
-                gorras SD 3 colores disponibles.
-            <br>
-                40.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/z1.jpeg" />
-            <b class="info-art">
-                tennis nike
-            <br>
-                120.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/z2.jpeg" />
-            <b class="info-art">
-                tennis adidas
-            <br>
-                180.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/z3.jpeg" />
-            <b class="info-art">
-                tennis nike
-            <br>
-                150.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/z4.jpeg" />
-            <b class="info-art">
-                tennis nike
-            <br>
-                150.000
-            </b>
-        </div>
-        <div class="casi-articulos">
-            <img class="arti" src="imagenes/ropahombre/z5.jpeg" />
-            <b class="info-art">
-                botas under armour.
-            <br>
-                200.000
-            </b>
-        </div>
     
-    </div>
-      
-    <div>
-          <footer>
-          contactos.<br>
-          WhatsApp: 000-000-00-00<br>
-          <a class="linkpie" href="https://mail.google.com/mail/u/0/#inbox?compose=new">correo electronico: Delicattus@gmail.com</a><br>
-          </footer>
+    <!-- Productos -->
+    <div class="container-ropa-H">
+        
     </div>
 
+    <footer>
+        contactos.<br>
+        WhatsApp: 000-000-00-00<br>
+        <a class="linkpie" href="https://mail.google.com/mail/u/0/#inbox?compose=new">correo electronico: Delicattus@gmail.com</a><br>
+    </footer>
+
+    <!-- documento de JavaScript -->
+    <script src="backendTienda.JS"></script>
 </body>
 </html>
