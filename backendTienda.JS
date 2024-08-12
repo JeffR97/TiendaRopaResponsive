@@ -43,8 +43,8 @@ const productos = [
     { id:407 , img:"imagenes/ropamujer/busorosa.png" , nombre:'Buso de cuello' , precio:70000 },
     { id:408, img:"imagenes/ropamujer/chaquetaCuerina.jpeg" , nombre:'Chaqueta de cuerina.' , precio:80000 },
     { id:409 , img:"imagenes/ropamujer/pantalonCamuflado.jpeg" , nombre:'Sudadera camuflada.' , precio:80000 },
-    { id:410 , img:"imagenes/ropamujer/tenis.png" , nombre:'Color: blanco-gris' , precio:160000 },
-    { id:411 , img:"imagenes/ropamujer/TenisAdidasNegro.jpeg" , nombre:'Color: negro' , precio:150000 },
+    { id:410 , img:"imagenes/ropamujer/tenis.png" , nombre:'Force one' , precio:160000 },
+    { id:411 , img:"imagenes/ropamujer/TenisAdidasNegro.jpeg" , nombre:'Adidas' , precio:150000 },
     { id:412 , img:"imagenes/ropamujer/busomujer.png" , nombre:'Buso unico color.' , precio:120000 },
 
     // --------------------------------------------------------------------------------------------------------
@@ -81,8 +81,8 @@ function renderizarProM(){
                 <br>
                 ${producto.precio}
                 </b>
-                <button class="añadirCarrito" onclick="agregarAlCarrito(${producto.id})">Añadir al Carrito</button>
-            </div>  
+                <img src="imagenes/bag-buy.svg" alt="Añadir al Carrito" class="imgBuy"  onclick="agregarAlCarrito(${producto.id})">
+                </div>  
         `;
         div1.innerHTML += html;
     });
@@ -103,7 +103,7 @@ function renderizarProH() {
                 <br>
                 ${producto.precio}
                 </b>
-                <button class="añadirCarrito" onclick="agregarAlCarrito(${producto.id})">Añadir al Carrito</button>
+                <img src="imagenes/bag-buy.svg" alt="Añadir al Carrito" class="imgBuy"  onclick="agregarAlCarrito(${producto.id})">
             </div>  
         `;
         div.innerHTML += html;    
@@ -124,7 +124,7 @@ function renderizarProN() {
                 <br>
                 ${producto.precio}
                 </b>
-                <button class="añadirCarrito" onclick="agregarAlCarrito(${producto.id})">Añadir al Carrito</button>
+                <img src="imagenes/bag-buy.svg" alt="Añadir al Carrito" class="imgBuy"  onclick="agregarAlCarrito(${producto.id})">
             </div>  
         `;
         div.innerHTML += html;    
@@ -145,7 +145,7 @@ function renderizarProAcc() {
                 <br>
                 ${producto.precio}
                 </b>
-                <button class="añadirCarrito" onclick="agregarAlCarrito(${producto.id})">Añadir al Carrito</button>
+                <img src="imagenes/bag-buy.svg" alt="Añadir al Carrito" class="imgBuy" onclick="agregarAlCarrito(${producto.id})">
             </div>  
         `;
         div.innerHTML += html;    
@@ -167,7 +167,7 @@ function renderizarCarrito() {
         const html = `
             <li>
                 ${producto.nombre} - $${producto.precio}
-                <button onclick="eliminarDelCarrito(${index})">Eliminar</button>
+                <img src="imagenes/delete.svg" alt="imgEliminar" class="imgElimina" onclick="eliminarDelCarrito(${index})">
             </li>
         `;
         ul.innerHTML += html;
@@ -188,7 +188,7 @@ function eliminarDelCarrito(index) {
 }
 
 // Evento para vaciar el carrito
-document.getElementById('vaciar-carrito').addEventListener('click', () => {
+document.getElementById('img-vaciar-carrito').addEventListener('click', () => {
     lista_carrito = [];
     renderizarCarrito();
 });
@@ -210,7 +210,7 @@ cont_carrito.addEventListener("click",()=>{
     if (listaCarrito.style.display === 'none' || listaCarrito.style.display === '') {
         listaCarrito.style.display = 'block';
         listaCarrito.style.position = 'relative';
-        listaCarrito.style.top = '8px';
+        listaCarrito.style.top = '20px';
         listaCarrito.style.right = '190px';
         listaCarrito.style.zIndex = '600';
     } else {
