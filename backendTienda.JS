@@ -55,7 +55,7 @@ const productos = [
     { id:1200 , img:"imagenes/accesorios/acc1.jpeg" , nombre:'Evilla para niña, Precio por unidad' , precio:2000  },
     { id:1201 , img:"imagenes/accesorios/acc2.jpeg" , nombre:'Correa de hombre en cuero.' , precio:50000 },
     { id:1202 , img:"imagenes/accesorios/acc3.jpeg" , nombre:'Maquillaje para mujer, Precio por unidad' , precio:10000  },
-    { id:1203 , img:"imagenes/accesorios/acc4.jpeg" , nombre:'Brillo para niña, Precio por unidad' , precio:8000 }
+    { id:1203 , img:"imagenes/accesorios/acc4.jpeg" , nombre:'Brillo para niña, Precio por unidad' , precio:8000 },
 ];
 const proHombre = productos.filter(producto => producto.id >= 1 && producto.id < 400);
 const proMujer = productos.filter(producto => producto.id >= 400 && producto.id < 800);
@@ -67,8 +67,8 @@ let lista_carrito = [];
 
 // Función para renderizar los productos
 function renderizarProM(){
-    const div1 = document.querySelector(".container-ropa-M");
-    if (!div1) {
+    const div = document.querySelector(".container-ropa-M");
+    if (!div) {
         console.error('Elemento no encontrado: .container-ropa-M');
         return;
     }
@@ -82,9 +82,9 @@ function renderizarProM(){
                 ${producto.precio}
                 </b>
                 <img src="imagenes/bag-buy.svg" alt="Añadir al Carrito" class="imgBuy"  onclick="agregarAlCarrito(${producto.id})">
-                </div>  
+            </div>  
         `;
-        div1.innerHTML += html;
+        div.innerHTML += html;
     });
 }
 
@@ -212,7 +212,7 @@ cont_carrito.addEventListener("click",()=>{
         listaCarrito.style.position = 'relative';
         listaCarrito.style.top = '20px';
         listaCarrito.style.right = '190px';
-        listaCarrito.style.zIndex = '600';
+        listaCarrito.style.zIndex = '600';s
     } else {
         listaCarrito.style.display = 'none';
     }
