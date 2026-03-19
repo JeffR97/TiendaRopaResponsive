@@ -16,42 +16,42 @@
 
     <script src="https://kit.fontawesome.com/99fb995ce2.js" crossorigin="anonymous"></script>
 
+    <!-- React y ReactDOM desde CDN -->
+  <!-- <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script> -->
+  <!-- Babel para poder usar JSX directamente -->
+  <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
     
 </head>
 <body>
+
+    <!-- <div id="react-root"></div> -->
+
     <header id="header_p">
         <div class="cont_logo">
-            <img  id="logodelicattus" src="imagenes/logodelicattus.png"/>
+            <img  id="logodelicattus" src="../imagenes/logodelicattus.png"/>
         </div>
-        <div class="cont_links">
-            <div class="redes">
-                <a  href="https://es-la.facebook.com"><img class= "logos_redes" src="imagenes/facebook.png" alt="facebook"></a>
-                <a  href="https://www.instagram.com/"><img class= "logos_redes" src="imagenes/Instagram.png" alt="instagram"></a>
-                <a  href="https://web.whatsapp.com/"><img  class= "logos_redes" src="imagenes/whatsapp.png" alt="WhatsApp"></a>
-            </div>
-            
-            <div class="cont_busqueda">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input class="c_busqueda" type="search" placeholder="buscar"/> 
-            </div>
-        </div>
+        
+        <!-- <div class="cont_busqueda">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="c_busqueda" type="search" placeholder="buscar"/> 
+        </div> 
         <div class="cont_busqueda_movil">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input class="busqueda_movil" type="search" placeholder="buscar"/> 
-        </div>
+        </div>  -->
         <div class="cont_carrito">
-            <img  class="img_carrito" src="imagenes/shoppingcart.png" alt="Carrito"/>
-            <!-- Lista -->
+            <img  class="img_carrito" src="../imagenes/shoppingcart.png" alt="Carrito"/>
+            <!-- Lista  -->
             <div class="cont_listaC" >
                 <h2 class="titLista">Carrito</h2>
-                <hr>
                 <ul id="lista-carrito">
-                    <!-- Los elementos del carrito se cargarán aquí -->
+                   <!-- Los elementos del carrito se cargarán aquí -->
                 </ul>
-                <hr>
-                <strong id="totalC">Total: $<span id="total-carrito">0</span></strong>
-                <!-- <button id="vaciar-carrito">Vaciar Carrito</button> -->
-                <img src="imagenes/delete-cancel-svgrepo-com.svg" alt="Vaciar carrito" id="img-vaciar-carrito">
+                <div class="total-list">
+                    <strong id="totalC">Total: $<span id="total-carrito">0</span></strong>
+                    <img src="../imagenes/delete-cancel-svgrepo-com.svg" alt="Vaciar carrito" id="img-vaciar-carrito">
+                </div>
             </div>
         </div>
     </header>
@@ -59,17 +59,17 @@
     <nav class="nav_movil">
         <div class="div_inicio">    
 
-            <div class="listainicio">
+            <div class="lista inicio">
                 <div class="casilla">
                     <a class="link_nav" href="index.html">Inicio</a>
                 </div>
             </div>
             
-            <div class="listahombre">
+            <div class="lista hombre">
                 <div class="casilla">
                     <a class="link_nav" href="index_hombre.html">Hombre</a>
                 </div>
-                <div class="opcioneshombre">
+                <div class="opciones hombre">
                     <a class="li_nav"  href="b">camisas</a>
                     <a class="li_nav"  href="b">pantalones</a>
                     <a class="li_nav"  href="b">tennis</a>
@@ -78,32 +78,32 @@
                 </div>
                     
             </div>
-            <div class="listamujer">
+            <div class="lista mujer">
                 <div class="casilla">
                     <a  class="link_nav" href="index_mujer.html">Mujer</a>
                 </div>
-                <div class="opcionesmujer">
+                <div class="opciones mujer">
                     <a class="li_nav"  href="b">blusas</a></li>
                     <a class="li_nav"  href="b">pantalones</a></li>
                     <a class="li_nav"  href="b">tennis</a></li>  
                     <a class="li_nav"  href="b">chaquetas</a></li>
                 </div>
             </div>
-            <div class="listaniño">
+            <div class="lista niño">
                 <div class="casilla">
                     <a  class="link_nav" href="index_nino.html">Niño/a</a>
                 </div>
-                <div class="opcionesniño">
+                <div class="opciones niño">
                     <a class="li_nav"  href="b">camisas</a>
                     <a class="li_nav"  href="b">pantalones</a>
                     <a class="li_nav"  href="b">tennis</a>
                 </div>
             </div>
-            <div class="listaaccesorios">
+            <div class="lista accesorios">
                 <div class="casilla">
                     <a  class="link_nav" href="index_accesorios.html">Accesorios</a>
                 </div>
-                <div class="opcionesaccesorios">
+                <div class="opciones accesorios">
                     <a class="li_nav" href="b">collares</a>
                     <a class="li_nav" href="b">manillas</a>
                     <a class="li_nav" href="b">aretas</a>
@@ -111,7 +111,7 @@
                 </div>
             </div>
        </div>
-<!-- lista de navegación para dispositivos moviles -->
+<!-- lista de navegación para dispositivos móviles -->
         
         <ul class="lista_responsive">
             <div class="cont_boton">
@@ -126,6 +126,15 @@
             </div>     
         </ul>  
     </nav>
+
+    <div class="cont-redes">
+        <a target="_blank" rel="noopener noreferrer" title="Delicattus_pv" href="https://www.instagram.com/delicattus_pv"><img class= "logos_redes" src="../imagenes/Instagram.png" alt="instagram"></a>
+        <a target="_blank" rel="noopener noreferrer" title="Delicattus" href="https://web.whatsapp.com/"><img  class= "logos_redes" src="../imagenes/whatsapp.png" alt="WhatsApp"></a>
+    </div>
+    
+    <div class="contFlecha">
+        <img class="flechaTop" src="../imagenes/flecha-top-svgrepo-com.svg" alt="top">
+    </div>
     
     <!-- Productos -->
     <div class="container-ropa-H">
@@ -133,12 +142,44 @@
     </div>
 
     <footer>
-        contactos.<br>
-        WhatsApp: 000-000-00-00<br>
-        <a class="linkpie" href="https://mail.google.com/mail/u/0/#inbox?compose=new">correo electronico: Delicattus@gmail.com</a><br>
+        Contáctenos.<br>
+        
+        <a class="linkpie" target="_blank" rel="noopener noreferrer" title="correo" href="https://mail.google.com/mail/u/0/#inbox?compose=new">Enviar correo: Delicattus@gmail.com</a><br>
     </footer>
 
-    <!-- documento de JavaScript -->
+    <!-- documento de JavaScript -->    
     <script src="backendTienda.JS"></script>
+
+    <!-- <script type="text/babel">
+
+        function ListaCarrito(){
+            return(
+                <header id="header_p">
+                    <div className="cont_logo">
+                        <img  id="logodelicattus" src="../imagenes/logodelicattus.png"/>
+                    </div>
+                    <div className="cont_carrito">
+                        <img  className="img_carrito" src="../imagenes/shoppingcart.png" alt="Carrito"/>
+                        
+                        <div className="cont_listaC" >
+                            <h2 className="titLista">Carrito</h2>
+                            <ul id="lista-carrito">
+
+                            </ul>
+                            <div className="total-list">
+                                <strong id="totalC">Total: $<span id="total-carrito">0</span></strong>
+                                <img src="../imagenes/delete-cancel-svgrepo-com.svg" alt="Vaciar carrito" id="img-vaciar-carrito"></>
+                            </div>
+                        
+                        </div>
+                    </div>
+                </header>
+            );
+        }
+
+        // Renderizar solo en el div #react-root
+        const root = ReactDOM.createRoot(document.getElementById('react-root'));
+        root.render(<ListaCarrito />);
+    </script> -->
 </body>
 </html>
