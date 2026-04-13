@@ -17,15 +17,13 @@
     <script src="https://kit.fontawesome.com/99fb995ce2.js" crossorigin="anonymous"></script>
 
     <!-- React y ReactDOM desde CDN -->
-  <!-- <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script> -->
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
   <!-- Babel para poder usar JSX directamente -->
-  <!-- <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     
 </head>
 <body>
-
-    <!-- <div id="react-root"></div> -->
 
     <header id="header_p">
         <div class="cont_logo">
@@ -40,20 +38,20 @@
             <i class="fa-solid fa-magnifying-glass"></i>
             <input class="busqueda_movil" type="search" placeholder="buscar"/> 
         </div>  -->
-        <div class="cont_carrito">
+        <!-- <div class="cont_carrito">
             <img  class="img_carrito" src="../imagenes/shoppingcart.png" alt="Carrito"/>
-            <!-- Lista  -->
+            Lista 
             <div class="cont_listaC" >
                 <h2 class="titLista">Carrito</h2>
                 <ul id="lista-carrito">
-                   <!-- Los elementos del carrito se cargarán aquí -->
+                   Los elementos del carrito se cargarán aquí
                 </ul>
                 <div class="total-list">
                     <strong id="totalC">Total: $<span id="total-carrito">0</span></strong>
                     <img src="../imagenes/delete-cancel-svgrepo-com.svg" alt="Vaciar carrito" id="img-vaciar-carrito">
                 </div>
             </div>
-        </div>
+        </div> -->
     </header>
 
     <nav class="nav_movil">
@@ -136,6 +134,10 @@
         <img class="flechaTop" src="../imagenes/flecha-top-svgrepo-com.svg" alt="top">
     </div>
     
+    <!-- _____________________________ contenedor REACT ____________________________________ -->
+    <div id="react-root"></div>
+
+
     <!-- Productos -->
     <div class="container-ropa-H">
         
@@ -150,6 +152,8 @@
     <!-- documento de JavaScript -->    
     <script src="backendTienda.JS"></script>
 
+    <!-- documento de React --> 
+    <script src="seccionRect.js" type="text/babel"></script>
     <!-- <script type="text/babel">
 
         function ListaCarrito(){
@@ -158,21 +162,7 @@
                     <div className="cont_logo">
                         <img  id="logodelicattus" src="../imagenes/logodelicattus.png"/>
                     </div>
-                    <div className="cont_carrito">
-                        <img  className="img_carrito" src="../imagenes/shoppingcart.png" alt="Carrito"/>
-                        
-                        <div className="cont_listaC" >
-                            <h2 className="titLista">Carrito</h2>
-                            <ul id="lista-carrito">
-
-                            </ul>
-                            <div className="total-list">
-                                <strong id="totalC">Total: $<span id="total-carrito">0</span></strong>
-                                <img src="../imagenes/delete-cancel-svgrepo-com.svg" alt="Vaciar carrito" id="img-vaciar-carrito"></>
-                            </div>
-                        
-                        </div>
-                    </div>
+                    
                 </header>
             );
         }
